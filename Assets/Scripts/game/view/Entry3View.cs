@@ -19,7 +19,7 @@ namespace com.ztgame.ioc
 
         private void onClickStart()
         {
-            dispatcher.Dispatch(START_CLICK);
+            dispatcher.Dispatch(START_CLICK,2.2);
         }
         public void setChangeText(string text)
         {

@@ -14,7 +14,7 @@ namespace com.ztgame.ioc
         {
             dispatcher.AddListener(GameEvent.SET_CHANGE_TEXT,onEventSetText);
 
-            view.dispatcher.AddListener(EntryView.CLICK_TEXT, onClickChangeText);
+            view.dispatcher.AddListener(Entry3View.START_CLICK, onClickChangeText);
             view.init();
         }
 
@@ -30,7 +30,7 @@ namespace com.ztgame.ioc
 
         public override void OnRemove()
         {
-            view.dispatcher.RemoveListener(EntryView.CLICK_TEXT,onClickChangeText);
+            view.dispatcher.RemoveListener(Entry3View.START_CLICK,onClickChangeText);
             dispatcher.RemoveListener(GameEvent.SET_CHANGE_TEXT, onEventSetText);
         }
     }
