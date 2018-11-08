@@ -25,7 +25,6 @@ namespace com.ztgame.ioc
 
         private void onClickChangeText(IEvent evt)
         {
-            dispatcher.Dispatch(GameEvent.CHANGE_TEXT, evt.data);
             dispatcher.Dispatch(GameEvent.TO_VIEW_2);
         }
 
