@@ -18,7 +18,9 @@ namespace com.ztgame.ioc
 		protected override void mapBindings()
 		{
 			injectionBinder.Bind <EntryData>().ToSingleton();
-            injectionBinder.Bind <UIManager>().ToSingleton();
+            // injectionBinder.Bind <UIManager>().ToSingleton();
+            injectionBinder.Bind <UIManager>().SetValue(UIManager.instance);
+
 
 			commandBinder.Bind (ContextEvent.START).To<StartAppCommand>().To<StartGameCommand>().Once();
             mediationBinder.Bind<EntryView>().To<EntryMediator>();
@@ -28,6 +30,8 @@ namespace com.ztgame.ioc
 			commandBinder.Bind(GameEvent.CHANGE_TEXT).To<ChangeTextCommand>();
 			commandBinder.Bind(GameEvent.TO_VIEW_2).To<ToView2Command>();
             commandBinder.Bind(GameEvent.TO_VIEW_3).To<ToView3Command>();
+
+            ManagerCenter.Instance.onInit();
         }
         protected override void addCoreComponents()
         {

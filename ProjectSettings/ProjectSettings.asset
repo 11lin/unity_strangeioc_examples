@@ -176,7 +176,7 @@ PlayerSettings:
   StripUnusedMeshComponents: 0
   VertexChannelCompressionMask:
     serializedVersion: 2
-    m_Bits: 238
+    m_Bits: 110
   iPhoneSdkVersion: 988
   iOSTargetOSVersionString: 7.0
   tvOSSdkVersion: 0
@@ -551,8 +551,11 @@ PlayerSettings:
   webGLUseWasm: 0
   webGLCompressionFormat: 1
   scriptingDefineSymbols:
-    1: 
-    7: 
+    1: CROSS_PLATFORM_INPUT
+    4: CROSS_PLATFORM_INPUT
+    7: CROSS_PLATFORM_INPUT
+    13: CROSS_PLATFORM_INPUT
+    14: CROSS_PLATFORM_INPUT
   platformArchitecture: {}
   scriptingBackend: {}
   incrementalIl2cppBuild: {}

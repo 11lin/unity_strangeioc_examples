@@ -10,6 +10,8 @@ namespace com.ztgame.ioc
         public const string CLICK_TEXT = "CLICK_TEXT";
         private Button changeBtn;
         private Text changeText;
+        [Inject]
+        public UIManager uiMgr {get;set;}
         internal void init()
         {
             changeBtn = transform.Find("Button").GetComponent<Button>();
@@ -19,7 +21,8 @@ namespace com.ztgame.ioc
 
         private void onClickChange()
         {
-            dispatcher.Dispatch(CLICK_TEXT,2.1);
+            // dispatcher.Dispatch(CLICK_TEXT,2.1);
+            uiMgr.show("Entry2View");
         }
         public void setChangeText(string text)
         {
